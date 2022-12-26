@@ -9,24 +9,26 @@
     @include md {
       width: min(100% - 40px, 1640px);
     }
-    @include xx {
-      width: min(100% - 20px, 1640px);
-    }
+
+    // @include xx {
+    //   width: min(100% - 20px, 1640px);
+    // }
+
     margin-inline: auto;
 
     &--alt {
-      margin-top: -140px;
+      // margin-top: -140px;
 
       @include lg {
-        margin-top: -50px;
+        // margin-top: -50px;
       }
 
       @media (max-width: 585.8px) {
-        margin-top: 0;
+        // margin-top: 0;
       }
 
       @media (min-height: 1100.8px) {
-        margin-top: -300px;
+        // margin-top: -300px;
       }
     }
   }

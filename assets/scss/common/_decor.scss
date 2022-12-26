@@ -2,6 +2,8 @@
 @use "../mixins" as *;
 
 .decor {
+  position: relative;
+
   &__left {
     position: absolute;
     z-index: 2;
@@ -10,9 +12,11 @@
     @include xl {
       max-width: 371px;
     }
+
     @include lg {
       max-width: 155px;
     }
+
     @include xs {
       max-width: 118px;
     }
@@ -21,17 +25,12 @@
   &__right {
     position: absolute;
     z-index: 2;
+    left: 0;
     right: 0;
+    top: 0;
+    bottom: 0;
 
-    @include xl {
-      max-width: 266px;
-    }
-    @include lg {
-      max-width: 120px;
-    }
-    @include xs {
-      max-width: 98px;
-    }
+    background: linear-gradient(218.96deg, #00013A 27.46%, rgba(0, 1, 58, 0) 79.19%);
   }
 
   &__main {
@@ -58,7 +57,7 @@
 
       content: "";
 
-      background: linear-gradient(180deg, rgba(15, 24, 21, 0) 0%, #1f2d28 100%);
+      background: linear-gradient(360deg, #01023D 0%, rgba(1, 2, 61, 0.79) 38.02%, rgba(1, 2, 61, 0) 96.87%);
 
       @include md {
         height: 50px;
