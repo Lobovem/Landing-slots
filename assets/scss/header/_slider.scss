@@ -34,12 +34,13 @@
     min-height: 177px;
     padding: 10px 10px;
 
+    background: #1D1E60;
     border-radius: 4px;
-    background: #36403c;
 
     @include md {
       min-height: 107px;
     }
+
     @include xs {
       min-height: 78px;
     }
