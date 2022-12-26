@@ -2,38 +2,28 @@
 @use "../mixins" as *;
 
 .actions {
-  @include lg-min {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: $gap;
-    justify-items: center;
-  }
+  @include lg-min {}
 
-  @include lg {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-  }
+  @include lg {}
 
 
   &__logo {
     max-width: 294px;
-    margin-bottom: 60px;
-    padding-top: 60px;
+    margin-bottom: 100px;
 
     @include ul {}
 
     @include lg {
-      max-width: 84px;
-      margin-bottom: 80px;
-      padding-top: 40px;
+      // max-width: 84px;
+      // margin-bottom: 80px;
+      // padding-top: 40px;
     }
 
     @include md {
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
   }
 
@@ -43,7 +33,6 @@
     font-size: $font-size-40;
     line-height: 49px;
 
-    text-align: center;
     letter-spacing: 0.05em;
 
     color: #FCCA2F;
@@ -64,7 +53,7 @@
     }
 
     @include lg {
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       font-size: $font-size-16;
       line-height: 20px;
@@ -92,7 +81,7 @@
     color: $color-white;
 
     @include ul {
-      margin-bottom: 20px;
+      margin-bottom: 74px;
     }
 
     @include xl {
