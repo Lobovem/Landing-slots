@@ -97,7 +97,7 @@
   &__img {
     position: relative;
 
-    max-width: 1009px;
+    max-width: 600px;
 
     @include xl {
       max-width: 520px;
@@ -111,13 +111,21 @@
       max-width: 275px;
     }
 
-    // @media (min-height: 990.8px) {
-    //   max-width: 640px;
-    // }
+
+    @media (min-height: 1150.8px) {
+      max-width: 760px;
+    }
+
+    @media (min-height: 1100.8px) {
+      max-width: 730px;
+    }
 
     @media (min-height: 1050.8px) {
-      height: 800px;
+      max-width: 700px;
+    }
 
+    @media (min-height: 1000.8px) {
+      max-width: 650px;
     }
   }
 

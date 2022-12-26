@@ -7,19 +7,25 @@
   &__left {
     position: absolute;
     z-index: 2;
-    left: 0;
+    top: -143px;
+    left: -28px;
+    background: #FF00E5;
+    mix-blend-mode: soft-light;
+    filter: blur(127.5px);
+    width: 860px;
+    height: 860px;
 
-    @include xl {
-      max-width: 371px;
-    }
+    // @include xl {
+    //   max-width: 371px;
+    // }
 
-    @include lg {
-      max-width: 155px;
-    }
+    // @include lg {
+    //   max-width: 155px;
+    // }
 
-    @include xs {
-      max-width: 118px;
-    }
+    // @include xs {
+    //   max-width: 118px;
+    // }
   }
 
   &__right {
@@ -50,7 +56,7 @@
       position: absolute;
       z-index: 6;
       right: 0;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
 
       height: 270px;
