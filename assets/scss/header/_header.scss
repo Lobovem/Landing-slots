@@ -92,10 +92,23 @@
 
     //   background: linear-gradient(180deg, rgba(15, 24, 21, 0) 0%, #1f2d28 100%);
     // }
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      background: #FF00E5;
+      mix-blend-mode: soft-light;
+      filter: blur(127.5px);
+      width: 250px;
+      height: 300px;
+      right: 70px;
+      bottom: 0;
+    }
   }
 
   &__img {
     position: relative;
+
 
     max-width: 600px;
 
