@@ -1,0 +1,119 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.header {
+  position: relative;
+
+
+
+  &__wrap {
+    position: relative;
+    z-index: 5;
+
+    @include md {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 576.8px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__contant {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    align-items: start;
+
+    gap: 80px;
+    @include xl {
+      gap: $gap-xl;
+    }
+    @include lg-min {
+      justify-content: space-between;
+    }
+    @include lg {
+      justify-content: space-around;
+
+      gap: $gap;
+    }
+    @include sm {
+      gap: $gap-sm;
+    }
+
+
+
+    @media (min-width: 1100.8px) {
+      height: 100vh;
+      min-height: 850px;
+      max-height: 1200px;
+    }
+
+    @media (max-width: 585.8px) {
+      justify-content: center;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+
+    @include xl {
+      margin-left: 40px;
+    }
+    @include md {
+      margin-left: -72px;
+    }
+
+    @media (max-width: 585.8px) {
+      display: none;
+
+      margin-left: 0;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 5;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      height: 150px;
+
+      content: "";
+
+      background: linear-gradient(180deg, rgba(15, 24, 21, 0) 0%, #1f2d28 100%);
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    max-width: 590px;
+    height: auto;
+
+    @include xl {
+      max-width: 520px;
+    }
+    @include lg {
+      max-width: 350px;
+    }
+    @include md {
+      max-width: 275px;
+    }
+
+    @media (min-height: 990.8px) {
+      max-width: 640px;
+    }
+
+    @media (min-height: 1050.8px) {
+      max-width: 700px;
+    }
+  }
+
+
+  &__item-wrap {
+    position: relative;
+    z-index: 3;
+  }
+}

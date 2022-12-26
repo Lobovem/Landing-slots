@@ -1,0 +1,33 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+
+.layout {
+  &__main {
+    width: min(100% - 80px, 1640px);
+
+    @include md {
+      width: min(100% - 40px, 1640px);
+    }
+    @include xx {
+      width: min(100% - 20px, 1640px);
+    }
+    margin-inline: auto;
+
+    &--alt {
+      margin-top: -140px;
+
+      @include lg {
+        margin-top: -50px;
+      }
+
+      @media (max-width: 585.8px) {
+        margin-top: 0;
+      }
+
+      @media (min-height: 1100.8px) {
+        margin-top: -300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.decor {
+  &__left {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+
+    @include xl {
+      max-width: 371px;
+    }
+    @include lg {
+      max-width: 155px;
+    }
+    @include xs {
+      max-width: 118px;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+
+    @include xl {
+      max-width: 266px;
+    }
+    @include lg {
+      max-width: 120px;
+    }
+    @include xs {
+      max-width: 98px;
+    }
+  }
+
+  &__main {
+    position: relative;
+
+    background-image: url(../img/background-main-foto.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+
+    @media (max-width: 620.8px) {
+      background-position: 50% 0;
+      background-size: 200%;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 5;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      height: 150px;
+
+      content: "";
+
+      background: linear-gradient(180deg, rgba(15, 24, 21, 0) 0%, #1f2d28 100%);
+
+      @include md {
+        height: 50px;
+      }
+
+      @media (max-width: 1500.8px) {
+        height: 80px;
+      }
+    }
+  }
+}
