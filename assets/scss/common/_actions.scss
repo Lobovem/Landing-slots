@@ -55,6 +55,8 @@
     color: #FCCA2F;
 
     text-shadow: 0px 0px 0px #FCC931;
+    margin-bottom: 20px;
+
 
     // @media (max-width: 1600.8px) {
     //   padding-top: 10px;
@@ -172,6 +174,7 @@
 
     @media (max-width: 585.2px) {
       width: 280px;
+      box-shadow: 0px 10px 37px rgb(252 205 47 / 52%), inset 0px 4px 17px rgb(255 255 255 / 45%);
     }
   }
 
