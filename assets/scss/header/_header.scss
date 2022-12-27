@@ -8,6 +8,36 @@
 
   &__wrap {
     position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 945px;
+      height: 500px;
+      background: #FF00E5;
+      // mix-blend-mode: soft-light;
+      opacity: 0.1;
+      filter: blur(127.5px);
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 945px;
+      height: 500px;
+      background: #00A3FF;
+      opacity: 0.1;
+      filter: blur(127.5px);
+    }
+
+
     z-index: 5;
     padding-top: 60px;
 
@@ -30,11 +60,15 @@
       left: 50%;
       transform: translateX(-50%);
       width: 945px;
-      height: 945px;
+      height: 500px;
       background: #4351D0;
-      opacity: 0.3;
+      opacity: 0.1;
       filter: blur(127.5px);
+      z-index: 2;
     }
+
+
+
 
     z-index: 3;
 
@@ -111,7 +145,7 @@
       width: 400px;
       height: 150px;
       right: 0;
-      bottom: 170px;
+      bottom: 200px;
 
     }
 
