@@ -8,7 +8,7 @@
 
     display: grid;
 
-    margin-bottom: 90px;
+    margin-bottom: 66px;
 
     gap: $gap;
     grid-template-columns: repeat(4, 1fr);
@@ -96,7 +96,7 @@
   }
 
   &__title {
-    max-width: 254px;
+    max-width: 210px;
 
     text-align: center;
     letter-spacing: 0.05em;

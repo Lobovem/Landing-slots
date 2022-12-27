@@ -23,20 +23,26 @@
     }
 
     &::after {
-      position: absolute;
-      content: "";
-      bottom: -100px;
-      left: 0%;
-      /* transform: translateX(-50%); */
-      width: 945px;
-      height: 945px;
-      background: #00A3FF;
-      mix-blend-mode: soft-light;
-      filter: blur(127.5px);
-      z-index: 1;
+      @include lg-min {
+        position: absolute;
+        content: "";
+        bottom: -100px;
+        left: 0%;
+        /* transform: translateX(-50%); */
+        width: 945px;
+        height: 945px;
+        background: #00A3FF;
+        mix-blend-mode: soft-light;
+        filter: blur(127.5px);
+        z-index: 1;
+      }
     }
 
     padding-top: 60px;
+
+    @include xl {
+      padding-top: 45px;
+    }
 
     @include md {
       // margin-bottom: 16px;
@@ -50,19 +56,19 @@
   &__contant {
     position: relative;
 
-    &:after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 945px;
-      height: 945px;
-      background: #4351D0;
-      opacity: 0.3;
-      filter: blur(127.5px);
-      z-index: 3;
-    }
+    // &:after {//TODO врменно отключил
+    //   position: absolute;
+    //   content: "";
+    //   bottom: 0;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   width: 945px;
+    //   height: 945px;
+    //   background: #4351D0;
+    //   opacity: 0.3;
+    //   filter: blur(127.5px);
+    //   z-index: 3;
+    // }
 
     display: flex;
     align-items: start;
@@ -128,16 +134,28 @@
     //   background: linear-gradient(180deg, rgba(15, 24, 21, 0) 0%, #1f2d28 100%);
     // }
     &::after {
-      position: absolute;
-      content: "";
-      z-index: -1;
-      background: #FF00E5;
-      mix-blend-mode: soft-light;
-      filter: blur(127.5px);
-      width: 400px;
-      height: 150px;
-      right: 0;
-      bottom: 200px;
+
+      @include lg-min {
+
+        position: absolute;
+        content: "";
+        z-index: -1;
+        background: #FF00E5;
+        mix-blend-mode: soft-light;
+        filter: blur(127.5px);
+        width: 400px;
+        height: 150px;
+        right: 0;
+        bottom: 250px;
+      }
+
+      @media (min-height: 1150.8px) {}
+
+      @media (min-height: 1100.8px) {}
+
+      @media (min-height: 1050.8px) {}
+
+      @media (min-height: 1000.8px) {}
 
     }
 
@@ -151,6 +169,20 @@
       background: #FCB82F;
       filter: blur(75px);
       transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      @media (min-height: 1150.8px) {}
+
+      @media (min-height: 1100.8px) {
+        top: 450px;
+      }
+
+      @media (min-height: 1050.8px) {
+        top: 400px;
+      }
+
+      @media (min-height: 1000.8px) {
+        top: 350px;
+      }
     }
 
 
@@ -165,7 +197,7 @@
     max-width: 600px;
 
     @include xl {
-      max-width: 520px;
+      // max-width: 520px;
     }
 
     @include lg {

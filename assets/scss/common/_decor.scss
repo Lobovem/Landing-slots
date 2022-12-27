@@ -5,16 +5,24 @@
   position: relative;
 
   &__left {
-    position: absolute;
-    z-index: 2;
-    top: -143px;
-    left: -28px;
-    left: 0;
-    background: #FF00E5;
-    mix-blend-mode: soft-light;
-    filter: blur(127.5px);
-    width: 860px;
-    height: 860px;
+
+    @include lg-min {
+      position: absolute;
+      z-index: 3;
+      top: -143px;
+      left: -28px;
+      left: 0;
+      background: #FF00E5;
+      mix-blend-mode: soft-light;
+      filter: blur(127.5px);
+      width: 860px;
+      height: 860px;
+
+    }
+
+    @include xl {
+      z-index: 4;
+    }
 
     // @include xl {
     //   max-width: 371px;
@@ -31,7 +39,7 @@
 
   &__right {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     right: 0;
     top: 0;
@@ -46,12 +54,26 @@
     background-image: url(../img/background-main-foto.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-size: cover;
     z-index: 5;
 
+    @include xl-min {
+      background-size: cover;
+
+    }
+
+    @include xl {
+      background-position: 0 0;
+    }
+
+    @include lg {
+      background-position: 50% 50%;
+      background-size: cover;
+
+    }
+
     @media (max-width: 620.8px) {
-      background-position: 50% 0;
-      background-size: 200%;
+      // background-position: 50% 0;
+      // background-size: 200%;
     }
 
     &::before {
@@ -67,12 +89,16 @@
 
       background: linear-gradient(360deg, #01023D 0%, rgba(1, 2, 61, 0.79) 38.02%, rgba(1, 2, 61, 0) 96.87%);
 
+      z-index: 12;
+
+      @include xl {}
+
       @include md {
-        height: 50px;
+        // height: 50px;
       }
 
       @media (max-width: 1500.8px) {
-        height: 80px;
+        // height: 80px;
       }
     }
   }

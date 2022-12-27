@@ -4,7 +4,7 @@
 .actions {
   display: flex;
   flex-direction: column;
-  z-index: 11;
+  z-index: 12;
 
   @include lg-min {}
 
@@ -15,7 +15,10 @@
     max-width: 294px;
     margin-bottom: 100px;
 
-    @include ul {}
+    @include xl {
+      max-width: 201px;
+      margin-bottom: 60px;
+    }
 
     @include lg {
       // max-width: 84px;
@@ -49,6 +52,10 @@
     //   line-height: 39px;
     // }
 
+    @include xl {
+      margin-bottom: 10px;
+    }
+
     @media (max-width: 1350.8px) {
       font-size: $font-size-26;
     }
@@ -80,24 +87,26 @@
     text-transform: uppercase;
 
     color: $color-white;
+    margin-bottom: 80px;
 
-    @include ul {
-      margin-bottom: 74px;
-    }
+    @include ul {}
 
     @include xl {
       font-size: $font-size-90;
       line-height: 120%;
+      margin-bottom: 30px;
+
+      max-width: 600px;
+
     }
 
     @include lg {
+      font-size: $font-size-48;
       max-width: 440px;
       margin-bottom: 20px;
     }
 
-    @include md {
-      font-size: $font-size-48;
-    }
+    @include md {}
 
     @include xs {
       max-width: 390px;
@@ -125,7 +134,7 @@
     border-radius: 86px;
 
     @include xl {
-      width: 370px;
+      width: 378px;
       min-height: 94px;
     }
 

@@ -54,14 +54,12 @@
     letter-spacing: 0.05em;
 
     color: #6d6d71;
-
-    font-size: $font-size-18;
+    font-family: $font-family-Inter;
+    font-size: $font-size-16;
     font-weight: $font-weight-400;
     line-height: 160%;
 
-    @include xl {
-      font-size: $font-size-16;
-    }
+    @include xl {}
 
     @include lg {
       order: 0;
