@@ -10,6 +10,11 @@
 
   @include lg {}
 
+  @media (max-width: 585.2px) {
+    justify-content: center;
+    align-items: center;
+  }
+
 
   &__logo {
     max-width: 294px;
@@ -27,8 +32,16 @@
     }
 
     @include md {
-      // margin-bottom: 20px;
+      max-width: 144px;
+      margin-bottom: 30px;
+
     }
+
+    @media (max-width: 585.2px) {
+      margin-bottom: 20px;
+    }
+
+
   }
 
   &__title {
@@ -67,6 +80,12 @@
       line-height: 20px;
     }
 
+    @media (max-width: 585.2px) {
+      margin-bottom: 20px;
+    }
+
+
+
     @include xs {
       margin-bottom: 10px;
 
@@ -102,20 +121,28 @@
 
     @include lg {
       font-size: $font-size-48;
-      max-width: 440px;
+      max-width: 350px;
       margin-bottom: 20px;
     }
 
-    @include md {}
+    @include md {
+      margin-bottom: 30px;
+    }
 
-    @include xs {
-      max-width: 390px;
-      margin-bottom: 10px;
+    @media (max-width: 585.2px) {
+      text-align: center;
+      margin-bottom: 34px;
 
-      span {
+    }
+
+    span {
+      @media (max-width: 585.2px) {
         font-size: 80px;
+        line-height: 120%;
       }
     }
+
+    @include xs {}
 
   }
 

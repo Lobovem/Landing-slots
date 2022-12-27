@@ -19,6 +19,7 @@
 
     @include lg {
       grid-template-columns: repeat(2, 1fr);
+      padding-top: 40px;
     }
 
     @include md {
@@ -83,20 +84,19 @@
     max-width: 80px;
 
     @include xl {
-      max-width: 70px;
+      // max-width: 70px;
     }
 
     @include sm {
-      max-width: 40px;
+      // max-width: 40px;
     }
 
     @include xx {
-      max-width: 35px;
+      max-width: 45px;
     }
   }
 
   &__title {
-    max-width: 210px;
 
     text-align: center;
     letter-spacing: 0.05em;
@@ -109,21 +109,20 @@
     line-height: 120%;
 
     @include xl {
-      max-width: 191px;
-
-      font-size: $font-size-24;
+      font-size: $font-size-32;
+      line-height: 150%;
     }
 
     @include sm {
-      max-width: 127px;
 
-      font-size: $font-size-16;
+      font-size: $font-size-24;
+      line-height: 100%;
     }
 
     @include xx {
-      max-width: 111px;
 
-      font-size: $font-size-14;
+      font-size: $font-size-18;
+      line-height: 120%;
     }
   }
 }

@@ -5,6 +5,8 @@
   position: relative;
   overflow: hidden;
 
+  @media (min-width: 585.8px) {}
+
 
   &__wrap {
     position: relative;
@@ -20,6 +22,12 @@
       mix-blend-mode: soft-light;
       filter: blur(127.5px);
       z-index: 1;
+
+      @include lg {
+        left: 50%;
+        transform: translateX(-50%);
+        height: 945px;
+      }
     }
 
     &::after {
@@ -45,11 +53,11 @@
     }
 
     @include md {
-      // margin-bottom: 16px;
+      padding-top: 35px;
     }
 
-    @media (max-width: 576.8px) {
-      // margin-bottom: 24px;
+    @media (max-width: 585.8px) {
+      margin-bottom: 20px;
     }
   }
 
@@ -73,7 +81,7 @@
     display: flex;
     align-items: start;
 
-    gap: 15px;
+    gap: 50px;
 
     @include xl {
       // gap: $gap-xl;
@@ -88,7 +96,14 @@
 
     }
 
-    @include sm {}
+    @include md {
+      gap: 0;
+    }
+
+    @include sm {
+      gap: 0;
+
+    }
 
 
 
@@ -109,11 +124,14 @@
 
 
 
-    @include xl {
-      margin-left: 40px;
-    }
+    @include xl {}
 
-    @include md {}
+
+    @include md {
+      margin-right: -100px;
+      transform: rotate(-10deg);
+
+    }
 
     @media (max-width: 585.8px) {
       display: none;
@@ -183,6 +201,12 @@
       @media (min-height: 1000.8px) {
         top: 350px;
       }
+
+      @include lg {
+        width: 97px;
+        height: 93px;
+        top: 200px;
+      }
     }
 
 
@@ -201,11 +225,11 @@
     }
 
     @include lg {
-      max-width: 350px;
+      max-width: 340px;
     }
 
     @include md {
-      max-width: 275px;
+      // max-width: 275px;
     }
 
 
