@@ -8,13 +8,13 @@
 
     display: grid;
 
-    margin-bottom: 66px;
+    margin-bottom: 74px;
 
     gap: $gap;
     grid-template-columns: repeat(4, 1fr);
 
     @include xl {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     @include lg {
@@ -23,8 +23,10 @@
       margin-bottom: 74px;
     }
 
-    @include md {
-      // margin-bottom: 20px;
+    @include sm {
+
+      margin-bottom: 94px;
+
     }
 
     @include xx {
@@ -127,7 +129,6 @@
     @include xx {
 
       font-size: $font-size-18;
-      line-height: 120%;
     }
   }
 }
