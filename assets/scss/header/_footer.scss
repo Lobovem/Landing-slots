@@ -6,48 +6,44 @@
     display: flex;
     align-items: center;
 
-    padding-top: 54px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 110px;
 
-    gap: 60px;
+    gap: 70px;
 
     @include xl {
+      // padding-top: 10px;
+
       padding-bottom: 30px;
 
-      gap: $gap;
+      gap: 45px;
     }
 
     @include lg {
       flex-direction: column;
+      padding-top: 54px;
+      padding-bottom: 50px;
 
-      padding-bottom: 20px;
-
-      gap: $gap-md;
+      gap: $gap;
     }
 
     @include sm {
-      padding-top: 20px;
+      padding-top: 54px;
+      padding-bottom: 30px;
+      gap: $gap-lg;
     }
   }
 
   &__img {
-    max-width: 213px;
+    max-width: 170px;
 
-    @include xl {
-      max-width: 203px;
-    }
+    @include xl {}
 
-    @include lg {
-      order: 1;
-    }
+    @include lg {}
 
-    @include md {
-      max-width: 125px;
-    }
+    @include md {}
 
-    @include xs {
-      max-width: 103px;
-    }
+    @include xs {}
   }
 
   &__decs {
@@ -67,8 +63,13 @@
       text-align: center;
     }
 
-    @include sm {
+    @include md {
       font-size: $font-size-12;
+
+    }
+
+    @include sm {
+      text-align: left;
     }
   }
 }

@@ -74,18 +74,19 @@
 
 
   .swiper-wrapper {
-    padding-bottom: 25px;
+    padding-bottom: 22px;
 
     @include sm {
-      padding-bottom: 15px;
+      padding-bottom: 12px;
     }
   }
 
   .swiper-pagination-bullet {
-    width: 14px;
-    height: 14px;
+    width: 8px;
+    height: 8px;
 
-    background: #36403c;
+    background: #36379B;
+    opacity: 1;
 
     @include sm {
       width: 8px;
@@ -96,4 +97,9 @@
   .swiper-pagination-bullet-active {
     background: #fbbf2f;
   }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 15px;
 }
