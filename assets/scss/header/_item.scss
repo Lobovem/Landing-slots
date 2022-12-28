@@ -61,11 +61,6 @@
 
     min-height: 320px;
     padding: 10px 10px 10px 10px;
-
-    // border-radius: 25px;
-    // background: rgba(255, 255, 255, 0.03);
-
-    // backdrop-filter: blur(18.5px);
     gap: $gap-xl;
 
     @include xl {
@@ -89,14 +84,6 @@
     display: flex;
 
     max-width: 80px;
-
-    @include xl {
-      // max-width: 70px;
-    }
-
-    @include sm {
-      // max-width: 40px;
-    }
 
     @include xx {
       max-width: 45px;
