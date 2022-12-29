@@ -3,6 +3,7 @@
 
 .header {
   position: relative;
+
   overflow: hidden;
 
 
@@ -10,48 +11,56 @@
   &__wrap {
     position: relative;
 
-    &:before {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 30%;
-      width: 945px;
-      height: 705px;
-      background: #FF00E5;
-      mix-blend-mode: soft-light;
-      filter: blur(127.5px);
-      z-index: 1;
-
-      @include lg {
-        left: 50%;
-        transform: translateX(-50%);
-        height: 945px;
-      }
-    }
-
-    &::after {
-      @include lg-min {
-        position: absolute;
-        content: "";
-        bottom: -100px;
-        left: 0%;
-        width: 945px;
-        height: 945px;
-        background: #00A3FF;
-        mix-blend-mode: soft-light;
-        filter: blur(127.5px);
-        z-index: 1;
-      }
-    }
-
     padding-top: 60px;
 
     @include xl {
       padding-top: 45px;
     }
-
     @include md {
       padding-top: 35px;
+    }
+
+    &:before {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 30%;
+
+      width: 945px;
+      height: 705px;
+
+      content: "";
+
+      background: #ff00e5;
+
+      filter: blur(127.5px);
+      @include lg {
+        left: 50%;
+
+        height: 945px;
+
+        transform: translateX(-50%);
+      }
+      mix-blend-mode: soft-light;
+    }
+
+    &::after {
+      @include lg-min {
+        position: absolute;
+        z-index: 1;
+        bottom: -100px;
+        left: 0;
+
+        width: 945px;
+        height: 945px;
+
+        content: "";
+
+        background: #00a3ff;
+
+        filter: blur(127.5px);
+        mix-blend-mode: soft-light;
+      }
     }
 
     @media (max-width: 585.8px) {
@@ -67,22 +76,15 @@
     align-items: start;
 
     gap: 50px;
-
-
     @include xl {
       gap: 20px;
-
     }
-
     @include lg-min {
       justify-content: space-between;
     }
-
     @include lg {
       justify-content: space-around;
-
     }
-
     @include md {
       gap: 0;
     }
@@ -103,54 +105,59 @@
     z-index: 11;
 
     @include xl-lg {
-
       margin-right: 80px;
-
     }
-
     @include md {
       margin-right: -100px;
-      transform: rotate(-10deg);
 
+      transform: rotate(-10deg);
     }
 
     @media (max-width: 585.8px) {
       display: none;
-
     }
 
     &::after {
-
       @include lg-min {
-
         position: absolute;
-        content: "";
         z-index: -1;
-        background: #FF00E5;
-        mix-blend-mode: soft-light;
-        filter: blur(127.5px);
-        width: 400px;
-        height: 150px;
         right: 0;
         bottom: 250px;
-      }
 
+        width: 400px;
+        height: 150px;
+
+        content: "";
+
+        background: #ff00e5;
+
+        filter: blur(127.5px);
+        mix-blend-mode: soft-light;
+      }
       @include xl {
         display: none;
       }
-
     }
 
     &:before {
-
       position: absolute;
-      content: "";
+      top: 330px;
+
       width: 225px;
       height: 225px;
-      top: 330px;
-      background: #FCB82F;
-      filter: blur(75px);
+
+      content: "";
       transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      background: #fcb82f;
+
+      filter: blur(75px);
+      @include lg {
+        top: 200px;
+
+        width: 97px;
+        height: 93px;
+      }
 
       @media (min-height: 1100.8px) {
         top: 450px;
@@ -163,12 +170,6 @@
       @media (min-height: 1000.8px) {
         top: 350px;
       }
-
-      @include lg {
-        width: 97px;
-        height: 93px;
-        top: 200px;
-      }
     }
   }
 
@@ -178,7 +179,6 @@
     display: inline-block;
 
     max-width: 600px;
-
 
     @include lg {
       max-width: 340px;

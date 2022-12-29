@@ -2,13 +2,14 @@
 @use "../mixins" as *;
 
 .actions {
-  display: flex;
-  flex-direction: column;
   z-index: 12;
 
+  display: flex;
+  flex-direction: column;
+
   @media (max-width: 585.2px) {
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
 
@@ -20,50 +21,36 @@
       max-width: 201px;
       margin-bottom: 60px;
     }
-
     @include md {
       max-width: 144px;
       margin-bottom: 30px;
-
     }
 
     @media (max-width: 585.2px) {
       margin-bottom: 20px;
     }
-
   }
 
   &__title {
-    font-family: $font-family-Montserrat;
-    font-weight: $font-weight-700;
-    font-size: $font-size-40;
-    line-height: 49px;
+    margin-bottom: 20px;
 
     letter-spacing: 0.05em;
 
-    color: #FCCA2F;
+    color: #fcca2f;
+    text-shadow: 0 0 0 #fcc931;
 
-    text-shadow: 0px 0px 0px #FCC931;
-    margin-bottom: 20px;
+    font-family: $font-family-Montserrat;
+    font-size: $font-size-40;
+    font-weight: $font-weight-700;
+    line-height: 49px;
 
     @include xl {
       margin-bottom: 10px;
-    }
-
-    @media (max-width: 1350.8px) {
-      font-size: $font-size-26;
-    }
-
+    }
     @include lg {
-
       font-size: $font-size-16;
       line-height: 20px;
-    }
-
-    @media (max-width: 585.2px) {
-      margin-bottom: 20px;
-    }
-
+    }
     @include xs {
       margin-bottom: 10px;
 
@@ -71,43 +58,50 @@
       line-height: 24px;
     }
 
+    @media (max-width: 1350.8px) {
+      font-size: $font-size-26;
+    }
+
+    @media (max-width: 585.2px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__desc {
-    font-family: $font-family-Oswald;
-    font-style: normal;
-    font-weight: $font-weight-600;
-    font-size: $font-size-118;
-    line-height: 100%;
+    margin-bottom: 80px;
+
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
     color: $color-white;
-    margin-bottom: 80px;
+
+    font-family: $font-family-Oswald;
+    font-size: $font-size-118;
+    font-weight: $font-weight-600;
+    font-style: normal;
+    line-height: 100%;
 
     @include xl {
-      font-size: $font-size-90;
-      line-height: 120%;
+      max-width: 600px;
       margin-bottom: 30px;
 
-      max-width: 600px;
-
+      font-size: $font-size-90;
+      line-height: 120%;
     }
-
     @include lg {
-      font-size: $font-size-48;
       max-width: 350px;
       margin-bottom: 20px;
-    }
 
+      font-size: $font-size-48;
+    }
     @include md {
       margin-bottom: 30px;
     }
 
     @media (max-width: 585.2px) {
-      text-align: center;
       margin-bottom: 34px;
 
+      text-align: center;
     }
 
     span {
@@ -116,7 +110,6 @@
         line-height: 120%;
       }
     }
-
   }
 
   &__link-box {
@@ -126,18 +119,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 505px;
     min-height: 126px;
 
-    background: linear-gradient(180deg, #FBA92E 0%, #FBDA2E 100%);
-    box-shadow: 0px 24px 60px rgba(252, 205, 47, 0.52), inset 0px 4px 17px rgba(255, 255, 255, 0.45);
     border-radius: 86px;
+    background: linear-gradient(180deg, #fba92e 0%, #fbda2e 100%);
+    box-shadow: 0 24px 60px rgba(252, 205, 47, 0.52), inset 0 4px 17px rgba(255, 255, 255, 0.45);
 
     @include xl {
       width: 378px;
       min-height: 94px;
     }
-
     @include lg {
       width: 266px;
       min-height: 66px;
@@ -145,51 +138,51 @@
 
     @media (max-width: 585.2px) {
       width: 280px;
-      box-shadow: 0px 10px 37px rgb(252 205 47 / 52%), inset 0px 4px 17px rgb(255 255 255 / 45%);
+
+      box-shadow: 0 10px 37px rgb(252 205 47 / 52%), inset 0 4px 17px rgb(255 255 255 / 45%);
     }
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-
+    width: 505px;
+    min-height: 126px;
     padding: 20px;
 
     cursor: pointer;
     transition: 0.2s linear;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-family-Montserrat;
-    font-weight: $font-weight-800;
-    font-size: $font-size-46;
-    line-height: 56px;
-
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    color: #0F101B;
-    width: 505px;
-    min-height: 126px;
+    color: #0f101b;
+    border: none;
+
+    font-family: $font-family-Montserrat;
+    font-size: $font-size-46;
+    font-weight: $font-weight-800;
+    line-height: 56px;
 
     @include xl {
-      font-size: $font-size-36;
-      line-height: 44px;
       width: 378px;
       min-height: 94px;
-    }
 
+      font-size: $font-size-36;
+      line-height: 44px;
+    }
     @include lg {
-      font-size: $font-size-24;
-      line-height: 29px;
       width: 266px;
       min-height: 66px;
+
+      font-size: $font-size-24;
+      line-height: 29px;
     }
 
     &:hover {
       color: #5e4300;
     }
-
   }
 }

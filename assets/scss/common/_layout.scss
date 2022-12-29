@@ -9,7 +9,6 @@
     @include md {
       width: min(100% - 40px, 1640px);
     }
-
     margin-inline: auto;
 
     &--alt {
@@ -17,9 +16,7 @@
 
       @include lg {
         margin-top: 0;
-
       }
-
     }
   }
 }
